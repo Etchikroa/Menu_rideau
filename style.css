@@ -1,0 +1,85 @@
+*,:before,:after{
+    margin:0px;
+    padding:0px;
+}
+body{
+    box-sizing:border-box;
+}
+
+.btn{
+    z-index: 10;
+    position: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:50px;
+    height:50px;
+    top:10px;
+    right:10px;
+    border:none;
+    background:none;
+
+}
+
+.item{
+    position:absolute;
+    display: block;
+    height: 3px;
+    width:100%;
+    background: navy;
+    transition: 0.5s ease-out;
+}
+
+.item1{
+    transform: translateY(10px);
+}
+.item3{
+    transform: translateY(-10px);
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    font-size: 1.5em;
+    
+}
+span{
+    font-size: 2em;
+    margin-left:10px;
+    color:orange;
+}
+nav{
+    background:#000;
+    width:100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    border-bottom: solid 2px navy;
+    flex-direction: column;
+    transition: 0.5s ease-out;
+    transform: translateY(-100%);
+}
+nav a{
+    margin:10px;
+    text-decoration: none;
+    color:#f1f1f1;
+    font-size: 1.5em;
+}
+
+.btn.active .item1{
+    transform:rotate(135deg);
+}
+
+.btn.active .item2{
+    opacity: 0;
+}
+
+.btn.active .item3{
+    transform: rotate(-135deg);
+}
+nav.active{
+    transform: translateY(0);
+}
